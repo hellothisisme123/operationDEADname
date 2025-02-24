@@ -57,7 +57,7 @@ function capitalizeFirstLetter(val) {
 
 // Function to replace visible text in the document
 function replaceVisibleText(targetText, replacementText) {
-    const bodyTextNodes = getTextNodesInDocument(document.body);
+    const bodyTextNodes = getTextNodesInDocument(document);
     bodyTextNodes.forEach(node => {
         if (node.nodeType === 3) {  // Text node
             // Save original text for reversal
@@ -72,7 +72,7 @@ function replaceVisibleText(targetText, replacementText) {
 
 // Reverse the text replacement
 function reverseReplaceVisibleText() {
-    const bodyTextNodes = getTextNodesInDocument(document.body);
+    const bodyTextNodes = getTextNodesInDocument(document);
     bodyTextNodes.forEach(node => {
         if (node.nodeType === 3) {  // Text node
             if (originalTextMap.has(node)) {
@@ -123,7 +123,7 @@ function observeTextNodes() {
         }
     });
 
-    observer.observe(document.body, {
+    observer.observe(document, {
         childList: true,
         subtree: true,
         characterData: true
