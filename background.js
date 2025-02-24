@@ -1,4 +1,9 @@
 console.log("Background script loaded");
+const policy = trustedTypes.createPolicy('my-policy', {
+    createHTML: (input) => {
+      return DOMPurify.sanitize(input);  // Sanitize input to ensure safety
+    }
+});
 
 // Listen for messages from popup.js
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
