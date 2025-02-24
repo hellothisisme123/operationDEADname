@@ -1,10 +1,9 @@
-# Getting Started With Google Chrome Extensions (Hello World)
+# Operation DEADname
 
-This example demonstrates how to create a simple "Hello World" Chrome Extension.
-For more details, visit the [official tutorial](https://developer.chrome.com/docs/extensions/get-started/tutorial/hello-world).
+An extension to automatically find and replace every text instance of your deadname with your preferred name.
 
 ## Running This Extension
 
 1. Clone this repository.
 2. Load this directory in Chrome as an [unpacked extension](https://developer.chrome.com/docs/extensions/mv3/getstarted/development-basics/#load-unpacked).
-3. Click the extension icon in the Chrome toolbar, then select the "Operation DEADname" extension. A popup will appear displaying the text "Hello Extensions".
+3. Click the extension icon in the Chrome toolbar, then select the "Operation DEADname" extension. A popup will appear.
